@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+
+		<!-- 用户登录 -->
+		<action name="student_login" class="com.testsystem.action.student.StudentLoginAction">
+			<result name="success">/student_main.jsp</result>
+			<result name="login_rejection">/alert_pages/login_rejection.jsp</result>
+			<result name="error">/alert_pages/login_error.jsp</result>
+		</action>
+		
+		<!-- 管理员登录 -->
+		<action name="admin_login" class="com.testsystem.action.admin.AdministratorLoginAction">
+			<result name="success">/administrator_main.jsp</result>
+			<result name="error">/alert_pages/login_error.jsp</result>
+		</action>
+		
+		<!-- 添加选择题 -->
+		<action name="add_choice_exercise" class="com.testsystem.action.admin.AddChoiceExerciseAction">
+			<result name="success">/alert_pages/add_success.jsp</result>
+			<result name="error">/alert_pages/add_error.jsp</result>
+		</action>
+		
+		<!-- 添加多项选择题 -->
+		<action name="add_multi_choice_exercise" class="com.testsystem.action.admin.AddMultiChoiceExerciseAction">
+			<result name="success">/alert_pages/add_success.jsp</result>
+			<result name="error">/alert_pages/add_error.jsp</result>
+		</action>
+		
+		<!-- 添加多项选择题 -->
+		<action name="add_judgement_exercise" class="com.testsystem.action.admin.AddJudgementExerciseAction">
+			<result name="success">/alert_pages/add_success.jsp</result>
+			<result name="error">/alert_pages/add_error.jsp</result>
+		</action>
+		
+		<!-- 删除选择题 -->
+		<action name="remove_exercise" class="com.testsystem.action.admin.RemoveChoiceExerciseAction">
+			<result name="success">/alert_pages/remove_success.jsp</result>
+			<result name="error">/alert_pages/remove_error.jsp</result>
+		</action>
+		
+		<!-- 添加学生-->
+		<action name="add_student" class="com.testsystem.action.admin.AddStudentAction">
+			<result name="success">/alert_pages/add_success.jsp</result>
+			<result name="error">/alert_pages/add_error.jsp</result>
+		</action>
+		
+		<!-- 删除用户 -->
+		<action name="remove_student" class="com.testsystem.action.admin.RemoveStudentAction">
+			<result name="success">/alert_pages/remove_success.jsp</result>
+			<result name="error">/alert_pages/remove_error.jsp</result>
+		</action>
+		
+		<!-- 设置开始时间 -->
+		<action name="set_times" class="com.testsystem.action.admin.SetTimesAction">
+			<result name="success">/alert_pages/set_success.jsp</result>
+			<result name="error">/alert_pages/set_error.jsp</result>
+		</action>
+		
+		<!-- 提交单选试题 -->
+		<action name="submit_single_answer" class="com.testsystem.action.student.JudgeSingleAnswerAction">
+			<result name="success">/alert_pages/saveSuccess.jsp</result>
+			<result name="error"></result>
+		</action>
+		
+		<!-- 提交多选试题 -->
+		<action name="submit_multi_answer" class="com.testsystem.action.student.JudgeMultiAnswerAction">
+			<result name="success">/alert_pages/saveSuccess.jsp</result>
+			<result name="error"></result>
+		</action>
+		
+		<!-- 提交判断试题 -->
+		<action name="submit_judgement_answer" class="com.testsystem.action.student.JudgeJudgementAnswerAction">
+			<result name="success">/JudgeResultPage.jsp</result>
+			<result name="error"></result>
+		</action>
+		
+	</package>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+</struts>
