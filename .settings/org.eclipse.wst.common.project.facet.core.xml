@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
   <runtime name="com.genuitec.embedded.tomcat.runtime.v70"/>
-  <secondary-runtime name="com.genuitec.runtime.generic.jee60"/>
   <fixed facet="java"/>
   <fixed facet="jst.web"/>
   <fixed facet="wst.jsdt.web"/>
@@ -10,4 +9,5 @@
   <installed facet="java" version="1.7"/>
   <installed facet="me.hibernate" version="4.1"/>
   <installed facet="me.spring" version="3.1"/>
+  <installed facet="web.struts2" version="2.1"/>
 </faceted-project>

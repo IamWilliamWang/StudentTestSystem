@@ -3,8 +3,10 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 	"http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
+	<constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+	
 	<package name="default" extends="struts-default">
-
+	
 		<!-- 用户登录 -->
 		<action name="student_login" class="com.testsystem.action.student.StudentLoginAction">
 			<result name="success">/student_main.jsp</result>
